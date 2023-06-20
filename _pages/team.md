@@ -11,7 +11,7 @@ permalink: /team/
  **We are  looking for new PhD students and Postdocs to join the team** [(see openings)]({{ site.url }}{{ site.baseurl }}/vacancies) **!**
 
 
-Jump to [staff](#staff), [phd students](#phd-students), [alumni](#alumni), [administrative support](#administrative-support).
+Jump to [staff](#staff), [phd students](#phd-students), [administrative support](#administrative-support).
 
 ## Staff
 {% assign number_printed = 0 %}
@@ -26,7 +26,7 @@ Jump to [staff](#staff), [phd students](#phd-students), [alumni](#alumni), [admi
 <div class="col-sm-6 clearfix">
   <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
-  <i>{{ member.info }} <!--<br>email: <{{ member.email }}></i> -->
+  <i>{{ member.info }} <br>email: <{{ member.email }}></i> 
   <ul style="overflow: hidden">
 
   {% if member.number_educ == 1 %}
@@ -89,8 +89,9 @@ Jump to [staff](#staff), [phd students](#phd-students), [alumni](#alumni), [admi
 {% endif %}
 
 <div class="col-sm-6 clearfix">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
-  <i>{{ member.info }} <!-- <br>email: <{{ member.email }}></i> -->
+  <i>{{ member.info }} <br>email: <{{ member.email }}></i> 
   <ul style="overflow: hidden">
 
   {% if member.number_educ == 1 %}
@@ -131,40 +132,6 @@ Jump to [staff](#staff), [phd students](#phd-students), [alumni](#alumni), [admi
 </div>
 {% endif %}
 
-
-## Alumni
-
-{% assign number_printed = 0 %}
-{% for member in site.data.alumni_members %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.duration }} <br> Role: {{ member.info }}</i>
-  <ul style="overflow: hidden">
-
-  </ul>
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-
-## Administrative Support
-<a href="mailto:jb780@cam.ac.uk">Jo Boyle</a> is manages the administration of the group.
+## Administrative Support  
+<img src="{{ site.url }}{{ site.baseurl }}/images/teampic/jo.jpg" class="img-responsive" width="12.5%" style="float: left" />
+<a href="mailto:jb780@cam.ac.uk">Jo Boyle</a> manages the administration of the group.
